@@ -16,8 +16,12 @@
             <clobbers target="cordova.plugins.deviceName" />
         </js-module>
         <config-file target='AndroidManifest.xml' parent='/manifest'>
-            <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="18" />
-        </config-file>
+             <uses-permission android:name="android.permission.BLUETOOTH"
+                android:maxSdkVersion="30" />
+            <uses-permission android:name="android.permission.BLUETOOTH_SCAN"
+                android:usesPermissionFlags="neverForLocation"/>
+            <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+        </config-file> -->
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="DeviceName" >
                 <param name="android-package" value="net.becvert.cordova.DeviceName"/>
